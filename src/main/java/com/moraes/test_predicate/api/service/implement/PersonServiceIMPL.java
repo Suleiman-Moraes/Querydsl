@@ -21,7 +21,7 @@ public class PersonServiceIMPL implements PersonService{
 	@Override
 	public Person test() {
 		QPerson person = QPerson.person;
-		Predicate predicate = person.name.eq("Suleiman");
+		Predicate predicate = person.name.eq("Suleiman").and(person.address.containsIgnoreCase("nHe"));
 		return pessoaDAO.findOne(predicate).get();
 	}
 }

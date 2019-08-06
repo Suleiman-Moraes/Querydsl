@@ -8,5 +8,4 @@ import com.moraes.test_predicate.api.model.Person;
 public interface PersonService {
 
 	Person test();
-
 }

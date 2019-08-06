@@ -15,9 +15,9 @@ public class PersonController {
 	
 	@Autowired
 	private PersonService service;
-
+	
 	@GetMapping
-	public ResponseEntity<Person> teste(){
+	public ResponseEntity<Person> test(){
 		return ResponseEntity.ok(service.test());
 	}
 }

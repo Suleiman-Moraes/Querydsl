@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.moraes.test_predicate.api.model.Person;
 import com.moraes.test_predicate.api.service.PersonService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/api/person")
 public class PersonController {
@@ -16,6 +18,7 @@ public class PersonController {
 	@Autowired
 	private PersonService service;
 	
+	@ApiOperation(value = "test querydsl")
 	@GetMapping
 	public ResponseEntity<Person> test(){
 		return ResponseEntity.ok(service.test());
